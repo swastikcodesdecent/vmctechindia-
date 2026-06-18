@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Projects | VMC Tech India</title>
+<meta name="description" content="Explore the portfolio of websites, landing pages, and web apps designed and developed by VMC Tech India at honest, affordable prices." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #0A0E17;
+    --bg-alt: #0E1422;
+    --card: #141B2C;
+    --card-soft: rgba(255,255,255,0.03);
+    --primary: #0F1B30;
+    --primary-light: #E8EDF5;
+    --accent: #3B82F6;
+    --accent-soft: rgba(59,130,246,0.14);
+    --orange: #FF7A45;
+    --orange-dark: #FF9166;
+    --orange-soft: rgba(255,122,69,0.14);
+    --text: #E5E7EB;
+    --text-secondary: #94A3B8;
+    --border: #232B3D;
+    --radius: 12px;
+    --shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--primary-light);
+    line-height: 1.25;
+  }
+
+  h1{
+    font-weight: 700;
+  }
+
+  .hero-eyebrow, .section-tag, .price-card .badge, .tech-badge, .num, .step-num, code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  a{ text-decoration: none; color: inherit; }
+
+  .container{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section{ padding: 90px 0; }
+
+  .section-tag{
+    display:inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 14px;
+  }
+
+  .section-head{
+    max-width: 680px;
+    margin: 0 auto 56px;
+    text-align: center;
+  }
+
+  .section-head h2{
+    font-size: 34px;
+    margin-bottom: 14px;
+  }
+
+  .section-head p{
+    color: var(--text-secondary);
+    font-size: 16px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease, transform 0.15s ease;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .btn:hover{ transform: translateY(-2px); }
+  .btn:active{ transform: translateY(0); }
+
+  .btn-primary{
+    background: var(--orange);
+    color: #FFFFFF;
+    box-shadow: 0 0 0 0 rgba(255,122,69,0.0);
+  }
+  .btn-primary:hover{
+    background: var(--orange-dark);
+    box-shadow: 0 8px 24px rgba(255,122,69,0.25);
+  }
+
+  .btn-outline{
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+  }
+  .btn-outline:hover{ background: rgba(255,255,255,0.12); }
+
+  .btn-secondary{
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .btn-secondary:hover{ border-color: var(--accent); color: var(--accent); }
+
+  .btn-block{ width: 100%; }
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10,14,23,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+  }
+
+  header.scrolled{
+    background: rgba(10,14,23,0.97);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  }
+
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .logo{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--primary-light);
+    letter-spacing: -0.01em;
+  }
+  .logo span{ color: var(--orange); }
+
+  .nav-links{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a{
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+    position: relative;
+    padding-bottom: 4px;
+  }
+
+  .nav-links a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--orange);
+    transition: width 0.25s ease;
+  }
+
+  .nav-links a:hover{ color: var(--accent); }
+  .nav-links a:hover::after{ width: 100%; }
+  
+  .nav-links a.active{ color: var(--orange); }
+  .nav-links a.active::after{ width: 100%; }
+
+  .nav-cta{ display: flex; align-items: center; gap: 14px; }
+  .nav-cta .btn{ padding: 11px 22px; font-size: 14px; }
+
+  .menu-toggle{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .menu-toggle span{
+    width: 24px;
+    height: 2px;
+    background: var(--primary-light);
+    border-radius: 2px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding: 80px 0 60px;
+    background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .hero-eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange-soft);
+    color: var(--orange-dark);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(255,122,69,0.25);
+  }
+
+  .hero h1{
+    font-size: 46px;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 .highlight{ color: var(--accent); }
+
+  .hero p.lead{
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin-bottom: 0px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- Portfolio Specific Styles ---------- */
+  .portfolio-section {
+    background: var(--bg);
+  }
+
+  /* Filter Bar */
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  .filter-btn {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--primary-light);
+  }
+
+  .filter-btn.active {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(255,122,69,0.25);
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(59,130,246,0.35);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Project Visual Mockups */
+  .project-visual {
+    position: relative;
+    height: 190px;
+    background: #0d121f;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    padding: 12px;
+  }
+
+  .project-browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .project-browser-bar span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+  }
+  .project-browser-bar span.dot-r { background: #FF5F56; }
+  .project-browser-bar span.dot-y { background: #FFBD2E; }
+  .project-browser-bar span.dot-g { background: #27C93F; }
+
+  .project-browser-screen {
+    width: 100%;
+    height: calc(100% - 17px);
+    border-radius: 6px;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+
+  /* Mockup Inside Layouts */
+  .mockup-inner {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Specific Mockup Styles */
+  .mockup-realestate {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+  }
+  .mockup-ecommerce {
+    background: linear-gradient(135deg, rgba(6, 78, 59, 0.95), rgba(4, 120, 87, 0.95));
+  }
+  .mockup-dental {
+    background: linear-gradient(135deg, rgba(8, 86, 139, 0.95), rgba(14, 116, 144, 0.95));
+  }
+  .mockup-education {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(59, 130, 246, 0.95));
+  }
+  .mockup-restaurant {
+    background: linear-gradient(135deg, rgba(120, 53, 4, 0.95), rgba(194, 65, 12, 0.95));
+  }
+  .mockup-industrial {
+    background: linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(75, 85, 99, 0.95));
+  }
+  .mockup-portfolio {
+    background: linear-gradient(135deg, rgba(88, 28, 135, 0.95), rgba(126, 34, 206, 0.95));
+  }
+  .mockup-ngo {
+    background: linear-gradient(135deg, rgba(20, 83, 45, 0.95), rgba(16, 185, 129, 0.95));
+  }
+  .mockup-djp {
+    background: linear-gradient(135deg, #090d16 0%, #111827 100%);
+  }
+  .mockup-aether {
+    background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+  }
+  .mockup-vyronix {
+    background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  }
+  .mockup-gst {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+  .mockup-hypernodes {
+    background: linear-gradient(135deg, #083344 0%, #155e75 100%);
+  }
+  .mockup-lumiai {
+    background: linear-gradient(135deg, #4c1d95 0%, #831843 100%);
+  }
+  .mockup-paulbrothers {
+    background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+  }
+
+  .mockup-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 6px;
+  }
+  .mockup-logo {
+    font-size: 10px;
+    font-weight: 800;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .mockup-logo span { color: var(--orange); }
+  .mockup-links {
+    display: flex;
+    gap: 6px;
+  }
+  .mockup-links span {
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+  }
+  .mockup-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 0;
+  }
+  .mockup-hero-title {
+    height: 7px;
+    width: 80%;
+    background: #fff;
+    border-radius: 4px;
+  }
+  .mockup-hero-sub {
+    height: 4px;
+    width: 60%;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+  }
+  .mockup-widget {
+    height: 18px;
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    border: 1px dashed rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+  }
+  .mockup-widget-bar {
+    width: 50%;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+  .mockup-grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .mockup-box {
+    height: 24px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+  .mockup-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4px;
+  }
+  .mockup-footer-line {
+    width: 40px;
+    height: 3px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 2px;
+  }
+  .mockup-button {
+    padding: 3px 8px;
+    font-size: 7px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--orange);
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  /* Card Info Styling */
+  .project-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .project-tag {
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--orange);
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+
+  .project-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-light);
+    font-weight: 700;
+  }
+
+  .project-desc {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 18px;
+    flex-grow: 1;
+  }
+
+  .project-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .tech-badge {
+    font-size: 11px;
+    background: var(--bg-alt);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  .project-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+    margin-bottom: 20px;
+  }
+
+  .metric-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .metric-label {
+    font-size: 10.5px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+  }
+  .metric-val {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-light);
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .project-actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  .project-actions .btn {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 13.5px;
+    border-radius: 6px;
+  }
+
+  /* ---------- Modal Popup Styles ---------- */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(5, 7, 12, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 24px;
+  }
+
+  .modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal-container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+
+  .modal-overlay.open .modal-container {
+    transform: scale(1);
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+  }
+
+  .modal-close-btn:hover {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+  }
+
+  .modal-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .modal-visual-pane {
+    background: #0d121f;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+
+  .modal-visual-pane .project-browser-screen {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .modal-visual-pane .mockup-inner {
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .modal-visual-pane .mockup-logo {
+    font-size: 14px;
+  }
+  .modal-visual-pane .mockup-links span {
+    width: 20px;
+    height: 4px;
+  }
+  .modal-visual-pane .mockup-hero-title {
+    height: 14px;
+    border-radius: 6px;
+  }
+  .modal-visual-pane .mockup-hero-sub {
+    height: 8px;
+    border-radius: 4px;
+  }
+  .modal-visual-pane .mockup-widget {
+    height: 40px;
+    padding-left: 12px;
+  }
+  .modal-visual-pane .mockup-box {
+    height: 44px;
+  }
+  .modal-visual-pane .mockup-button {
+    padding: 6px 14px;
+    font-size: 11px;
+    border-radius: 3px;
+  }
+
+  .modal-content-pane {
+    padding: 40px;
+  }
+
+  .modal-tag {
+    font-size: 12px;
+    color: var(--orange);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .modal-title {
+    font-size: 28px;
+    color: var(--primary-light);
+    margin-bottom: 16px;
+    font-weight: 800;
+  }
+
+  .modal-desc-section {
+    margin-bottom: 24px;
+  }
+
+  .modal-section-title {
+    font-size: 14px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .modal-desc-p {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .modal-features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .modal-features-list li {
+    font-size: 14px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .modal-features-list li svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .modal-testimonial {
+    background: var(--bg-alt);
+    border-left: 3px solid var(--orange);
+    padding: 18px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 28px;
+  }
+
+  .testimonial-text {
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--text);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .testimonial-author {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+
+  .modal-actions {
+    display: flex;
+    gap: 14px;
+  }
+  
+  .modal-actions .btn {
+    flex: 1;
+  }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background: linear-gradient(135deg, var(--primary) 0%, #16243F 100%);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 60px;
+    text-align:center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before{
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(255,122,69,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-cta h2{ color:#fff; font-size: 32px; margin-bottom: 14px; }
+  .final-cta p{ color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 30px; }
+
+  .final-cta-actions{
+    display:flex;
+    gap: 16px;
+    justify-content:center;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background: var(--primary);
+    color: rgba(255,255,255,0.7);
+    padding: 60px 0 24px;
+  }
+
+  .footer-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .footer-grid h4{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .footer-logo{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  .footer-logo span{ color: var(--orange); }
+
+  .footer-grid p{ font-size: 14px; line-height: 1.7; }
+
+  .footer-links{ list-style:none; display:flex; flex-direction:column; gap: 10px; }
+  .footer-links a{ font-size: 14px; transition: color 0.2s ease; }
+  .footer-links a:hover{ color: #fff; }
+
+  .footer-bottom{
+    padding-top: 24px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  /* ---------- Animations ---------- */
+  @keyframes fadeUp{
+    from{ opacity: 0; transform: translateY(28px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+  }
+
+  .reveal{
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal.in-view{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-stagger > *{
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal-stagger.in-view > *{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-stagger.in-view > *:nth-child(1){ transition-delay: 0.05s; }
+  .reveal-stagger.in-view > *:nth-child(2){ transition-delay: 0.1s; }
+  .reveal-stagger.in-view > *:nth-child(3){ transition-delay: 0.15s; }
+  .reveal-stagger.in-view > *:nth-child(4){ transition-delay: 0.2s; }
+  .reveal-stagger.in-view > *:nth-child(5){ transition-delay: 0.25s; }
+  .reveal-stagger.in-view > *:nth-child(6){ transition-delay: 0.3s; }
+  .reveal-stagger.in-view > *:nth-child(7){ transition-delay: 0.35s; }
+  .reveal-stagger.in-view > *:nth-child(8){ transition-delay: 0.4s; }
+
+  .hero-eyebrow{ animation: fadeIn 0.8s ease both; }
+  .hero h1{ animation: fadeUp 0.8s ease 0.1s both; }
+  .hero p.lead{ animation: fadeUp 0.8s ease 0.2s both; }
+  
+  /* Filtering transitions */
+  .project-card.fade-out {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .project-card.fade-in {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .reveal-stagger > *, .hero-eyebrow, .hero h1, .hero p.lead{
+      animation: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1024px){
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .footer-grid{ grid-template-columns: 1fr 1fr; }
+    .modal-container {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 768px){
+    section{ padding: 60px 0; }
+    .nav-links, .nav-cta .btn-secondary{ display:none; }
+    .menu-toggle{ display:flex; }
+    .nav.open .nav-links{
+      display:flex;
+      flex-direction:column;
+      position:absolute;
+      top: 100%;
+      left:0; right:0;
+      background: var(--bg);
+      padding: 20px 24px;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero h1{ font-size: 32px; }
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    .modal-grid {
+      grid-template-columns: 1fr;
+    }
+    .modal-visual-pane {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 24px;
+    }
+    .modal-content-pane {
+      padding: 24px;
+    }
+    .footer-grid{ grid-template-columns: 1fr; }
+    .final-cta{ padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="nav" id="nav">
+    <a href="index.html#home" class="logo">VMC <span>Tech</span> India</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="index.html#process">Process</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="index.html#quote" class="btn btn-secondary">Get Quote</a>
+      <a href="index.html#quote" class="btn btn-primary">Start Project</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Delivered Work Portfolio</div>
+    <h1>Our Projects — Crafted With <span class="highlight">Precision & Purpose</span></h1>
+    <p class="lead">Explore real-world websites and web apps we've delivered for businesses, startups, and organizations across India. Filter by category to see our work.</p>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO SECTIONS ================= -->
+<section class="portfolio-section">
+  <div class="container">
+    
+    <!-- Filter Navigation -->
+    <div class="filter-container reveal">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+      <button class="filter-btn" data-filter="business">Business Websites</button>
+      <button class="filter-btn" data-filter="landing">Landing Pages</button>
+      <button class="filter-btn" data-filter="portfolio">Personal & Portfolios</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid reveal-stagger">
+      
+      <!-- Project 9: Developers Janata Party -->
+      <div class="project-card" data-category="portfolio" id="project-djp">
+        <div class="project-visual">
+          <div class="project-browser-bar">
+            <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          </div>
+          <div class="project-browser-screen">
+            <div class="mockup-inner mockup-djp">
+              <div class="mockup-top">
+                <div class="mockup-logo" style="color: #FF7A45;">DJP<span>.in</span></div>
+                <div class="mockup-links"><span></span><span></span><span></span></div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-hero-title" style="width: 70%; background: #FF7A45;"></div>
+                <div style="font-family:'JetBrains Mono'; font-size: 8px; color: #94A3B8; margin-top:2px;">const community = new DevCommunity();</div>
+                <div class="mockup-grid-view" style="margin-top: 5px;">
+                  <div class="mockup-box" style="height: 18px; border-color: rgba(255,122,69,0.3);"></div>
+                  <div class="mockup-box" style="height: 18px;"></div>
+                  <div class="mockup-box" style="height: 18px;"></div>
+                </div>
+              </div>
+              <div class="mockup-bottom">
+                <span class="mockup-footer-line"></span>
+                <span class="mockup-button" style="background:#FF7A45;">Join Party</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Community Platform</span>
+          <h3 class="project-title">Developers Janata Party</h3>
+          <p class="project-desc">A centralized community portal for Indian developers to connect, share projects, build teams, and collaborate on open-source ideas.</p>
+          <div class="project-techs">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS Grid</span>
+            <span class="tech-badge">JS</span>
+            <span class="tech-badge">Firebase</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric-item">
+              <span class="metric-label">Setup Cost</span>
+              <span class="metric-val">₹2,999</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Maintenance</span>
+              <span class="metric-val">₹249/mo</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary view-details-btn" data-project="djp">View Details</button>
+            <a href="index.html#quote" class="btn btn-primary">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 10: Aether 2K26 AI Hackathon -->
+      <div class="project-card" data-category="landing" id="project-aether">
+        <div class="project-visual">
+          <div class="project-browser-bar">
+            <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          </div>
+          <div class="project-browser-screen">
+            <div class="mockup-inner mockup-aether">
+              <div class="mockup-top">
+                <div class="mockup-logo" style="color: #60A5FA;">AETHER<span>2K26</span></div>
+                <div class="mockup-links"><span></span><span></span></div>
+              </div>
+              <div class="mockup-body" style="justify-content: center; gap: 4px;">
+                <div class="mockup-hero-title" style="width: 85%; background: linear-gradient(90deg, #3B82F6, #8B5CF6);"></div>
+                <div class="mockup-hero-sub" style="width: 50%;"></div>
+                <div style="display:flex; justify-content:center; gap:8px; margin-top:4px;">
+                  <div style="width: 25px; height: 12px; background: rgba(59,130,246,0.2); border-radius: 2px;"></div>
+                  <div style="width: 25px; height: 12px; background: rgba(139,92,246,0.2); border-radius: 2px;"></div>
+                </div>
+              </div>
+              <div class="mockup-bottom">
+                <span class="mockup-footer-line"></span>
+                <span class="mockup-button" style="background:#8B5CF6;">Register</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Event Landing Page</span>
+          <h3 class="project-title">Aether 2K26 Hackathon</h3>
+          <p class="project-desc">A premium, highly engaging landing page for the upcoming school AI Hackathon organized by DE PAUL School Bansdroni.</p>
+          <div class="project-techs">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">Vanilla CSS</span>
+            <span class="tech-badge">Glow Effects</span>
+            <span class="tech-badge">Forms API</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric-item">
+              <span class="metric-label">Setup Cost</span>
+              <span class="metric-val">₹1,499</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Maintenance</span>
+              <span class="metric-val">₹299/mo</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary view-details-btn" data-project="aether">View Details</button>
+            <a href="index.html#quote" class="btn btn-primary">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 11: Vyronix Labs -->
+      <div class="project-card" data-category="portfolio" id="project-vyronix">
+        <div class="project-visual">
+          <div class="project-browser-bar">
+            <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          </div>
+          <div class="project-browser-screen">
+            <div class="mockup-inner mockup-vyronix">
+              <div class="mockup-top">
+                <div class="mockup-logo" style="color: #10B981;">Vyronix<span>Labs</span></div>
+                <div class="mockup-links"><span></span><span></span><span></span></div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-hero-title" style="width: 60%; background: #10B981;"></div>
+                <div style="display: flex; gap: 4px; align-items: center; margin-top: 2px;">
+                  <span style="font-size: 8px; color: #10B981;">●</span>
+                  <div style="width: 40px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
+                </div>
+                <div class="mockup-widget" style="border-color: rgba(16,185,129,0.3); height: 14px;"><div class="mockup-widget-bar" style="background: #10B981; width: 75%;"></div></div>
+              </div>
+              <div class="mockup-bottom">
+                <span class="mockup-footer-line"></span>
+                <span class="mockup-button" style="background:#10B981;">IoT Projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Group Portfolio</span>
+          <h3 class="project-title">Vyronix Labs</h3>
+          <p class="project-desc">A hardware and IoT development portfolio built for a group of 4 hardware creators to showcase Arduino, ESP32, and electronics work.</p>
+          <div class="project-techs">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">Custom Flexbox</span>
+            <span class="tech-badge">Arduino schems</span>
+            <span class="tech-badge">Contact Form</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric-item">
+              <span class="metric-label">Setup Cost</span>
+              <span class="metric-val">₹1,899</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Maintenance</span>
+              <span class="metric-val">₹299/mo</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary view-details-btn" data-project="vyronix">View Details</button>
+            <a href="index.html#quote" class="btn btn-primary">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 12: GST Invoice Maker -->
+      <div class="project-card" data-category="business" id="project-gstinvoice">
+        <div class="project-visual">
+          <div class="project-browser-bar">
+            <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          </div>
+          <div class="project-browser-screen">
+            <div class="mockup-inner mockup-gst">
+              <div class="mockup-top">
+                <div class="mockup-logo" style="color: #3B82F6;">GST<span>Bill</span></div>
+                <div class="mockup-links"><span></span><span></span></div>
+              </div>
+              <div class="mockup-body" style="gap: 4px;">
+                <div style="height: 10px; background: rgba(255,255,255,0.1); border-radius: 2px; display: flex; align-items: center; padding: 0 4px; justify-content: space-between;">
+                  <span style="width: 15px; height: 3px; background: rgba(255,255,255,0.3);"></span>
+                  <span style="width: 10px; height: 3px; background: #3B82F6;"></span>
+                </div>
+                <div style="height: 25px; background: rgba(255,255,255,0.05); border-radius: 3px; display: flex; flex-direction: column; gap: 3px; padding: 4px;">
+                  <div style="width: 80%; height: 3px; background: rgba(255,255,255,0.2);"></div>
+                  <div style="width: 50%; height: 3px; background: rgba(255,255,255,0.2);"></div>
+                  <div style="width: 30%; height: 3px; background: var(--orange);"></div>
+                </div>
+              </div>
+              <div class="mockup-bottom">
+                <span class="mockup-footer-line"></span>
+                <span class="mockup-button" style="background:#3B82F6;">Download PDF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Web Application</span>
+          <h3 class="project-title">GST Invoice Maker</h3>
+          <p class="project-desc">A free billing utility allowing Indian small businesses to instantly compute GST taxes and download print-ready PDF invoices.</p>
+          <div class="project-techs">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">JS Logic</span>
+            <span class="tech-badge">PDF Gen API</span>
+            <span class="tech-badge">Local Storage</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric-item">
+              <span class="metric-label">Setup Cost</span>
+              <span class="metric-val">₹2,499</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Maintenance</span>
+              <span class="metric-val">Free (No Maint)</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary view-details-btn" data-project="gstinvoice">View Details</button>
+            <a href="index.html#quote" class="btn btn-primary">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 13: HyperNodes -->
+      <div class="project-card" data-category="business" id="project-hypernodes">
+        <div class="project-visual">
+          <div class="project-browser-bar">
+            <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          </div>
+          <div class="project-browser-screen">
+            <div class="mockup-inner mockup-hypernodes">
+              <div class="mockup-top">
+                <div class="mockup-logo" style="color: #06B6D4;">Hyper<span>Nodes</span></div>
+                <div class="mockup-links"><span></span><span></span><span></span></div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-hero-title" style="width: 75%; background: #06B6D4;"></div>
+                <div style="display: flex; gap: 4px; margin-top: 2px;">
+                  <div style="width: 16px; height: 16px; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); border-radius: 2px;"></div>
+                  <div style="width: 16px; height: 16px; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); border-radius: 2px;"></div>
+                  <div style="width: 16px; height: 16px; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); border-radius: 2px;"></div>
+                </div>
+              </div>
+              <div class="mockup-bottom">
+                <span class="mockup-footer-line"></span>
+                <span class="mockup-button" style="background:#06B6D4;">Get Server</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">SaaS Website</span>
+          <h3 class="project-title">HyperNodes Hosting</h3>
+          <p class="project-desc">A premium cloud hosting platform front-end highlighting node latency maps, VPS custom config pricing calculators, and SSH keys gates.</p>
+          <div class="project-techs">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS Animations</span>
+            <span class="tech-badge">JS Sliders</span>
+            <span class="tech-badge">Interactive Map</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric-item">
+              <span class="metric-label">Setup Cost</span>
+              <span class="metric-val">₹2,499</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Maintenance</span>
+              <span class="metric-val">₹299/mo</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary view-details-btn" data-project="hypernodes">View Details</button>
+            <a href="index.html#quote" class="btn btn-primary">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 14: Lumi AI UI Concept -->
+      <div class="project-card" data-category="landing" id="project-lumiai">
+        <div class="project-visual">
+          <div class="project-browser-bar">
+            <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          </div>
+          <div class="project-browser-screen">
+            <div class="mockup-inner mockup-lumiai">
+              <div class="mockup-top">
+                <div class="mockup-logo" style="color: #EC4899;">Lumi<span>AI</span></div>
+                <div class="mockup-links"><span></span><span></span></div>
+              </div>
+              <div class="mockup-body" style="align-items: center; justify-content: center;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #EC4899, #8B5CF6); margin-bottom: 2px; box-shadow: 0 0 10px rgba(236,72,153,0.5);"></div>
+                <div style="display:flex; gap:2px; height: 8px; align-items:center;">
+                  <span style="width: 2px; height: 6px; background: #EC4899;"></span>
+                  <span style="width: 2px; height: 8px; background: #8B5CF6;"></span>
+                  <span style="width: 2px; height: 4px; background: #EC4899;"></span>
+                  <span style="width: 2px; height: 8px; background: #8B5CF6;"></span>
+                </div>
+              </div>
+              <div class="mockup-bottom">
+                <span class="mockup-footer-line"></span>
+                <span class="mockup-button" style="background:#EC4899;">Talk</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">UI/UX Concept</span>
+          <h3 class="project-title">Lumi AI Companion</h3>
+          <p class="project-desc">A futuristic, fluid front-end user interface designed for an AI Companion app featuring glassmorphism overlays and SVG voice wave effects.</p>
+          <div class="project-techs">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">Glassmorphism</span>
+            <span class="tech-badge">CSS Glow</span>
+            <span class="tech-badge">SVG Waves</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric-item">
+              <span class="metric-label">UI Design Cost</span>
+              <span class="metric-val">₹4,999</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Maintenance</span>
+              <span class="metric-val">None (UI Only)</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary view-details-btn" data-project="lumiai">View Details</button>
+            <a href="index.html#quote" class="btn btn-primary">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 15: Paul Brothers -->
+      <div class="project-card" data-category="ecommerce" id="project-paulbrothers">
+        <div class="project-visual">
+          <div class="project-browser-bar">
+            <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          </div>
+          <div class="project-browser-screen">
+            <div class="mockup-inner mockup-paulbrothers">
+              <div class="mockup-top">
+                <div class="mockup-logo" style="color: #4ade80;">Paul<span>Bros</span></div>
+                <div class="mockup-links"><span></span><span></span><span></span></div>
+              </div>
+              <div class="mockup-body" style="gap: 4px;">
+                <div style="height: 10px; background: rgba(255,255,255,0.06); border-radius: 2px; display: flex; align-items: center; padding: 0 4px; justify-content: space-between;">
+                  <span style="width: 25px; height: 3px; background: rgba(255,255,255,0.2);"></span>
+                  <span style="width: 15px; height: 3px; background: #4ade80;"></span>
+                </div>
+                <div class="mockup-grid-view" style="grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 2px;">
+                  <div class="mockup-box" style="height: 22px; background: rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: flex-end; padding: 2px; border-radius: 3px;">
+                    <div style="width: 100%; height: 3px; background: #4ade80; border-radius: 1px;"></div>
+                  </div>
+                  <div class="mockup-box" style="height: 22px; background: rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: flex-end; padding: 2px; border-radius: 3px;">
+                    <div style="width: 100%; height: 3px; background: #4ade80; border-radius: 1px;"></div>
+                  </div>
+                  <div class="mockup-box" style="height: 22px; background: rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: flex-end; padding: 2px; border-radius: 3px;">
+                    <div style="width: 100%; height: 3px; background: #4ade80; border-radius: 1px;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-bottom">
+                <span class="mockup-footer-line"></span>
+                <span class="mockup-button" style="background:#16a34a; color: #fff;">Order Now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">E-Commerce & Catalog</span>
+          <h3 class="project-title">Paul Brothers Grocery</h3>
+          <p class="project-desc">A local e-commerce storefront and digital product catalog for a prominent grocery retailer located in the Bansdroni KMC Market.</p>
+          <div class="project-techs">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS Grid</span>
+            <span class="tech-badge">Vanilla JS</span>
+            <span class="tech-badge">WhatsApp API</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric-item">
+              <span class="metric-label">Setup Cost</span>
+              <span class="metric-val">₹3,499</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Maintenance</span>
+              <span class="metric-val">₹199/mo</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary view-details-btn" data-project="paulbrothers">View Details</button>
+            <a href="index.html#quote" class="btn btn-primary">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section id="cta" class="alt-bg">
+  <div class="container animate-on-scroll">
+    <div class="final-cta reveal">
+      <h2>Want to build something similar?</h2>
+      <p>Get in touch for a free consultation and customized demo design. No commitment, pay only if you like it.</p>
+      <div class="final-cta-actions">
+        <a href="index.html#quote" class="btn btn-primary">Request Free Quote</a>
+        <a href="index.html#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">VMC<span>Tech</span> India</div>
+        <p>We help small and medium businesses build a professional online presence with affordable, transparent, and reliable web development services.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#process">Our Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#services">Landing Pages</a></li>
+          <li><a href="index.html#services">Business Websites</a></li>
+          <li><a href="index.html#services">Website Redesign</a></li>
+          <li><a href="index.html#services">Maintenance & Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:contact.vmctechindia@gmail.com">contact.vmctechindia@gmail.com</a></li>
+          <li><a href="tel:+919038778498">+91 9038778498</a></li>
+          <li><a href="index.html#quote">Request a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> VMC Tech India. All rights reserved.</span>
+      <span>Designed & Developed by VMC Tech India</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= PORTFOLIO DETAILS MODAL ================= -->
+<div class="modal-overlay" id="projectModalOverlay">
+  <div class="modal-container">
+    <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+    <div class="modal-grid">
+      <!-- Visual Column -->
+      <div class="modal-visual-pane" id="modalVisualPane">
+        <!-- Inside mockup will be populated dynamically -->
+      </div>
+      <!-- Details Column -->
+      <div class="modal-content-pane">
+        <span class="modal-tag" id="modalTag">Category</span>
+        <h2 class="modal-title" id="modalTitle">Project Title</h2>
+        
+        <!-- Challenge Section -->
+        <div class="modal-desc-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-desc-p" id="modalChallenge">Loading details...</p>
+        </div>
+        
+        <!-- Solution Section -->
+        <div class="modal-desc-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <p class="modal-desc-p" id="modalSolution">Loading details...</p>
+        </div>
+
+        <!-- Features Section -->
+        <div class="modal-desc-section">
+          <h4 class="modal-section-title">Key Features Delivered</h4>
+          <ul class="modal-features-list" id="modalFeatures">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <!-- Review Testimonial -->
+        <div class="modal-testimonial">
+          <p class="testimonial-text" id="modalTestimonialText">"Feedback"</p>
+          <p class="testimonial-author" id="modalTestimonialAuthor">Client Name, Business</p>
+        </div>
+
+        <div class="modal-actions" id="modalActions">
+          <a href="index.html#quote" class="btn btn-primary">Build a Site Like This</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  // Project dataset for dynamic popup rendering
+  const projectsData = {
+    djp: {
+      title: "Developers Janata Party",
+      tag: "Community Platform",
+      category: "portfolio",
+      challenge: "Building a centralized hub for Indian developers to collaborate, share project ideas, network, and form teams for hackathons without friction.",
+      solution: "A highly engaging community portal with member directories, active project showcases, discussion boards, and event calendars designed with a modern dark-tech aesthetic.",
+      features: [
+        "Interactive member networking directory",
+        "Developer projects submission & voting",
+        "Community events calendar & registrations",
+        "Collaborative team builder for hackathons"
+      ],
+      testimonialText: "DJP has become the go-to hub for our developer networking and project collaboration.",
+      testimonialAuthor: "DJP Core Team",
+      mockupClass: "mockup-djp",
+      liveUrl: "https://www.djp.vmctechindia.in",
+      mockupHtml: `
+        <div class="mockup-top">
+          <div class="mockup-logo" style="color: #FF7A45;">DJP<span>.in</span></div>
+          <div class="mockup-links"><span></span><span></span><span></span></div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-hero-title" style="width: 70%; background: #FF7A45;"></div>
+          <div style="font-family:'JetBrains Mono'; font-size: 8px; color: #94A3B8; margin-top:2px;">const community = new DevCommunity();</div>
+          <div class="mockup-grid-view" style="margin-top: 5px;">
+            <div class="mockup-box" style="height: 18px; border-color: rgba(255,122,69,0.3);"></div>
+            <div class="mockup-box" style="height: 18px;"></div>
+            <div class="mockup-box" style="height: 18px;"></div>
+          </div>
+        </div>
+        <div class="mockup-bottom">
+          <span class="mockup-footer-line"></span>
+          <span class="mockup-button" style="background:#FF7A45;">Join Party</span>
+        </div>`
+    },
+    aether: {
+      title: "Aether 2K26 AI Hackathon",
+      tag: "Event Landing Page",
+      category: "landing",
+      challenge: "Creating a high-impact, futuristic landing page for DE PAUL School Bansdroni's upcoming AI hackathon to attract student registrations and showcase mentors and rules.",
+      solution: "A high-performance landing page with interactive timeline components, particle animations, instant register buttons, and FAQs, optimized for heavy mobile traffic.",
+      features: [
+        "Futuristic dark-mode UI with glow effects",
+        "Interactive hackathon timeline & schedule",
+        "Live team registration form integration",
+        "Mentor, sponsor, and judge profile grid"
+      ],
+      testimonialText: "Aether 2K26 website perfectly captures the futuristic vibe of our school's AI hackathon!",
+      testimonialAuthor: "DE PAUL School Organizing Team",
+      mockupClass: "mockup-aether",
+      liveUrl: "https://dpshackathon.vercel.app",
+      mockupHtml: `
+        <div class="mockup-top">
+          <div class="mockup-logo" style="color: #60A5FA;">AETHER<span>2K26</span></div>
+          <div class="mockup-links"><span></span><span></span></div>
+        </div>
+        <div class="mockup-body" style="justify-content: center; gap: 4px;">
+          <div class="mockup-hero-title" style="width: 85%; background: linear-gradient(90deg, #3B82F6, #8B5CF6);"></div>
+          <div class="mockup-hero-sub" style="width: 50%;"></div>
+          <div style="display:flex; justify-content:center; gap:8px; margin-top:4px;">
+            <div style="width: 25px; height: 12px; background: rgba(59,130,246,0.2); border-radius: 2px;"></div>
+            <div style="width: 25px; height: 12px; background: rgba(139,92,246,0.2); border-radius: 2px;"></div>
+          </div>
+        </div>
+        <div class="mockup-bottom">
+          <span class="mockup-footer-line"></span>
+          <span class="mockup-button" style="background:#8B5CF6;">Register</span>
+        </div>`
+    },
+    vyronix: {
+      title: "Vyronix Labs Portfolio",
+      tag: "Group Portfolio",
+      category: "portfolio",
+      challenge: "A 4-member hardware engineering team needed a sleek online portfolio to exhibit their innovative IoT and Arduino projects with schematics.",
+      solution: "An interactive tech portfolio page showcasing individual project cards, hardware spec sheets, components used, and direct team contact triggers.",
+      features: [
+        "Custom Arduino project showcase grid",
+        "Hardware schematic download capabilities",
+        "Sleek interactive team member profiles",
+        "Contact portal for custom IoT solutions"
+      ],
+      testimonialText: "Vyronix Labs portfolio highlights our IoT capabilities cleanly and has brought us several collaboration inquiries.",
+      testimonialAuthor: "Vyronix Labs Team",
+      mockupClass: "mockup-vyronix",
+      liveUrl: "https://vyronix-labsdevs.vercel.app/",
+      mockupHtml: `
+        <div class="mockup-top">
+          <div class="mockup-logo" style="color: #10B981;">Vyronix<span>Labs</span></div>
+          <div class="mockup-links"><span></span><span></span><span></span></div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-hero-title" style="width: 60%; background: #10B981;"></div>
+          <div style="display: flex; gap: 4px; align-items: center; margin-top: 2px;">
+            <span style="font-size: 8px; color: #10B981;">●</span>
+            <div style="width: 40px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
+          </div>
+          <div class="mockup-widget" style="border-color: rgba(16,185,129,0.3); height: 14px;"><div class="mockup-widget-bar" style="background: #10B981; width: 75%;"></div></div>
+        </div>
+        <div class="mockup-bottom">
+          <span class="mockup-footer-line"></span>
+          <span class="mockup-button" style="background:#10B981;">IoT Projects</span>
+        </div>`
+    },
+    gstinvoice: {
+      title: "GST Invoice Maker Tool",
+      tag: "Web Application",
+      category: "business",
+      challenge: "Creating a free, lightweight, client-side billing tool for small business owners in India to generate, calculate, and print compliant GST invoices instantly.",
+      solution: "A highly responsive web utility built with Vanilla JS that computes CGST/SGST/IGST automatically, stores client details locally, and formats print-ready invoices.",
+      features: [
+        "Automatic SGST, CGST, & IGST calculator",
+        "Print-friendly invoice layout formatting",
+        "Local storage history for item lists",
+        "Completely free-of-cost client utility"
+      ],
+      testimonialText: "This GST Invoice tool is incredibly simple and saves us hours of manual calculation every month.",
+      testimonialAuthor: "VMC Tech Internal Project",
+      mockupClass: "mockup-gst",
+      liveUrl: "https://gst-invoice-pi.vercel.app/",
+      mockupHtml: `
+        <div class="mockup-top">
+          <div class="mockup-logo" style="color: #3B82F6;">GST<span>Bill</span></div>
+          <div class="mockup-links"><span></span><span></span></div>
+        </div>
+        <div class="mockup-body" style="gap: 4px;">
+          <div style="height: 10px; background: rgba(255,255,255,0.1); border-radius: 2px; display: flex; align-items: center; padding: 0 4px; justify-content: space-between;">
+            <span style="width: 15px; height: 3px; background: rgba(255,255,255,0.3);"></span>
+            <span style="width: 10px; height: 3px; background: #3B82F6;"></span>
+          </div>
+          <div style="height: 25px; background: rgba(255,255,255,0.05); border-radius: 3px; display: flex; flex-direction: column; gap: 3px; padding: 4px;">
+            <div style="width: 80%; height: 3px; background: rgba(255,255,255,0.2);"></div>
+            <div style="width: 50%; height: 3px; background: rgba(255,255,255,0.2);"></div>
+            <div style="width: 30%; height: 3px; background: var(--orange);"></div>
+          </div>
+        </div>
+        <div class="mockup-bottom">
+          <span class="mockup-footer-line"></span>
+          <span class="mockup-button" style="background:#3B82F6;">Download PDF</span>
+        </div>`
+    },
+    hypernodes: {
+      title: "HyperNodes Hosting",
+      tag: "SaaS Website",
+      category: "business",
+      challenge: "A cloud hosting startup needed a high-conversion landing page to showcase server plans, node locations, and robust uptime guarantees to web developers.",
+      solution: "A high-performance modern dark theme website with interactive pricing calculators, server location maps, and instant sign-up integration.",
+      features: [
+        "Interactive server configuration builder",
+        "Sleek pricing table with monthly plans",
+        "Global node locations interactive map",
+        "Live server status monitor integration"
+      ],
+      testimonialText: "HyperNodes website represents our high-speed cloud infrastructure perfectly with its modern look.",
+      testimonialAuthor: "HyperNodes Management",
+      mockupClass: "mockup-hypernodes",
+      liveUrl: "https://hypernodes.vercel.app/",
+      mockupHtml: `
+        <div class="mockup-top">
+          <div class="mockup-logo" style="color: #06B6D4;">Hyper<span>Nodes</span></div>
+          <div class="mockup-links"><span></span><span></span><span></span></div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-hero-title" style="width: 75%; background: #06B6D4;"></div>
+          <div style="display: flex; gap: 4px; margin-top: 2px;">
+            <div style="width: 16px; height: 16px; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); border-radius: 2px;"></div>
+            <div style="width: 16px; height: 16px; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); border-radius: 2px;"></div>
+            <div style="width: 16px; height: 16px; background: rgba(6,182,212,0.15); border: 1px solid rgba(6,182,212,0.3); border-radius: 2px;"></div>
+          </div>
+        </div>
+        <div class="mockup-bottom">
+          <span class="mockup-footer-line"></span>
+          <span class="mockup-button" style="background:#06B6D4;">Get Server</span>
+        </div>`
+    },
+    lumiai: {
+      title: "Lumi AI Companion UI",
+      tag: "UI/UX Concept",
+      category: "landing",
+      challenge: "Designing a cutting-edge interface for an AI companion application that feels fluid, interactive, conversational, and futuristic.",
+      solution: "We built a glassmorphic front-end UI interface containing dynamic speech bubbles, interactive voice wave animations, and customizable AI settings.",
+      features: [
+        "Premium glassmorphic dashboard panel",
+        "Interactive chat window & dynamic feed",
+        "SVG animated voice wave visualizer",
+        "Custom AI personality settings panel"
+      ],
+      testimonialText: "The design is outstanding! The glassmorphism and subtle animations make the interface feel alive.",
+      testimonialAuthor: "Lumi AI UI Project",
+      mockupClass: "mockup-lumiai",
+      liveUrl: "https://lumi-ai-pi.vercel.app/",
+      mockupHtml: `
+        <div class="mockup-top">
+          <div class="mockup-logo" style="color: #EC4899;">Lumi<span>AI</span></div>
+          <div class="mockup-links"><span></span><span></span></div>
+        </div>
+        <div class="mockup-body" style="align-items: center; justify-content: center;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #EC4899, #8B5CF6); margin-bottom: 2px; box-shadow: 0 0 10px rgba(236,72,153,0.5);"></div>
+          <div style="display:flex; gap:2px; height: 8px; align-items:center;">
+            <span style="width: 2px; height: 6px; background: #EC4899;"></span>
+            <span style="width: 2px; height: 8px; background: #8B5CF6;"></span>
+            <span style="width: 2px; height: 4px; background: #EC4899;"></span>
+            <span style="width: 2px; height: 8px; background: #8B5CF6;"></span>
+          </div>
+        </div>
+        <div class="mockup-bottom">
+          <span class="mockup-footer-line"></span>
+          <span class="mockup-button" style="background:#EC4899;">Talk</span>
+        </div>`
+    },
+    paulbrothers: {
+      title: "Paul Brothers Grocery Store",
+      tag: "E-Commerce & Catalog",
+      category: "ecommerce",
+      challenge: "Providing a digital storefront and home-delivery ordering channel for a busy local grocery store in the Bansdroni KMC Market to cater to online shoppers.",
+      solution: "A lightweight, mobile-optimized catalog website listing daily grocery items, pricing, and active discounts, with a direct checkout route sending orders to their WhatsApp business line.",
+      features: [
+        "Dynamic, searchable grocery catalog",
+        "Mobile-first responsive storefront",
+        "WhatsApp-integrated checkout/order system",
+        "Easy administrative product price updates"
+      ],
+      testimonialText: "Our online order catalog has significantly increased home delivery sales in Bansdroni.",
+      testimonialAuthor: "Paul Brothers Store Management",
+      mockupClass: "mockup-paulbrothers",
+      liveUrl: "https://paulbrothers.vmctechindia.in",
+      mockupHtml: `
+        <div class="mockup-top">
+          <div class="mockup-logo" style="color: #4ade80;">Paul<span>Bros</span></div>
+          <div class="mockup-links"><span></span><span></span><span></span></div>
+        </div>
+        <div class="mockup-body" style="gap: 4px;">
+          <div style="height: 10px; background: rgba(255,255,255,0.06); border-radius: 2px; display: flex; align-items: center; padding: 0 4px; justify-content: space-between;">
+            <span style="width: 25px; height: 3px; background: rgba(255,255,255,0.2);"></span>
+            <span style="width: 15px; height: 3px; background: #4ade80;"></span>
+          </div>
+          <div class="mockup-grid-view" style="grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 2px;">
+            <div class="mockup-box" style="height: 22px; background: rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: flex-end; padding: 2px; border-radius: 3px;">
+              <div style="width: 100%; height: 3px; background: #4ade80; border-radius: 1px;"></div>
+            </div>
+            <div class="mockup-box" style="height: 22px; background: rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: flex-end; padding: 2px; border-radius: 3px;">
+              <div style="width: 100%; height: 3px; background: #4ade80; border-radius: 1px;"></div>
+            </div>
+            <div class="mockup-box" style="height: 22px; background: rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: flex-end; padding: 2px; border-radius: 3px;">
+              <div style="width: 100%; height: 3px; background: #4ade80; border-radius: 1px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-bottom">
+          <span class="mockup-footer-line"></span>
+          <span class="mockup-button" style="background:#16a34a; color: #fff;">Order Now</span>
+        </div>`
+    }
+  };
+
+  // --- Dynamic Filtering Logic ---
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Set active button
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filterValue = btn.getAttribute("data-filter");
+
+      // Filter project cards with fade transition
+      projectCards.forEach((card) => {
+        const cardCategory = card.getAttribute("data-category");
+        
+        if (filterValue === "all" || cardCategory === filterValue) {
+          // Show card
+          card.classList.remove("hide");
+          // Retrigger flow for entry fade animation
+          setTimeout(() => {
+            card.classList.remove("fade-out");
+            card.classList.add("fade-in");
+          }, 10);
+        } else {
+          // Hide card
+          card.classList.remove("fade-in");
+          card.classList.add("fade-out");
+          // Add display none after transition completes
+          setTimeout(() => {
+            card.classList.add("hide");
+          }, 300);
+        }
+      });
+    });
+  });
+
+  // --- Portfolio Modal Popup Handler ---
+  const modalOverlay = document.getElementById("projectModalOverlay");
+  const modalCloseBtn = document.getElementById("modalCloseBtn");
+  const modalVisualPane = document.getElementById("modalVisualPane");
+  const modalTag = document.getElementById("modalTag");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalChallenge = document.getElementById("modalChallenge");
+  const modalSolution = document.getElementById("modalSolution");
+  const modalFeatures = document.getElementById("modalFeatures");
+  const modalTestimonialText = document.getElementById("modalTestimonialText");
+  const modalTestimonialAuthor = document.getElementById("modalTestimonialAuthor");
+
+  function openModal(projectId) {
+    const data = projectsData[projectId];
+    if (!data) return;
+
+    // Populate contents
+    modalTag.textContent = data.tag;
+    modalTitle.textContent = data.title;
+    modalChallenge.textContent = data.challenge;
+    modalSolution.textContent = data.solution;
+    modalTestimonialText.textContent = `"${data.testimonialText}"`;
+    modalTestimonialAuthor.textContent = data.testimonialAuthor;
+
+    // Populate visual mockup
+    modalVisualPane.innerHTML = `
+      <div class="project-browser-screen">
+        <div class="mockup-inner ${data.mockupClass}">
+          ${data.mockupHtml}
+        </div>
+      </div>`;
+
+    // Populate features list
+    modalFeatures.innerHTML = "";
+    data.features.forEach((feat) => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 6 9 17l-5-5"/>
+        </svg>
+        ${feat}`;
+      modalFeatures.appendChild(li);
+    });
+
+    // Populate actions
+    const modalActions = document.getElementById("modalActions");
+    if (data.liveUrl) {
+      modalActions.innerHTML = `
+        <a href="index.html#quote" class="btn btn-primary">Build a Site Like This</a>
+        <a href="${data.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visit Live Site</a>
+      `;
+    } else {
+      modalActions.innerHTML = `
+        <a href="index.html#quote" class="btn btn-primary">Build a Site Like This</a>
+      `;
+    }
+
+    // Display modal
+    modalOverlay.classList.add("open");
+    document.body.style.overflow = "hidden"; // Prevent background scroll
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove("open");
+    document.body.style.overflow = ""; // Restore background scroll
+  }
+
+  // Bind click events to 'View Details' buttons
+  document.querySelectorAll(".view-details-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const projId = btn.getAttribute("data-project");
+      openModal(projId);
+    });
+  });
+
+  // Bind close events
+  modalCloseBtn.addEventListener("click", closeModal);
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+  
+  // ESC key to close modal
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("open")) {
+      closeModal();
+    }
+  });
+
+  // --- General Nav & Animations ---
+  
+  // Mobile menu toggle
+  const menuToggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+    });
+  });
+
+  // Scroll Reveal Animations
+  const revealEls = document.querySelectorAll(".reveal, .reveal-stagger");
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+    revealEls.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("in-view"));
+  }
+
+  // Header background scroll addition
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 12);
+  });
+
+  // Set current year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
